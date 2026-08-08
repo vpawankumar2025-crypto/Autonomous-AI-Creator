@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: cyberforge-autonomous-agent
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PUBLISH_INTERVAL_MINUTES
+        value: 30
+      - key: MIN_TOPIC_SCORE
+        value: 60
